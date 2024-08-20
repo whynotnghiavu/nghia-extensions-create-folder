@@ -1,11 +1,11 @@
 import os
 
-
 def create_folder(folder_path):
-    for i in range(START,END):
-        print(i)
-        # Tạo folder con f"KhoaHoc{i}"
-
+    for i in range(START, END):
+        subfolder_name = f"KhoaHoc{i}"
+        subfolder_path = os.path.join(folder_path, subfolder_name)
+        os.makedirs(subfolder_path, exist_ok=True)  # Creates the subfolder if it doesn't already exist
+        print(f"Created folder: {subfolder_path}")
 
 folder_path = r"input-nghia-extensions-create-folder"
 
